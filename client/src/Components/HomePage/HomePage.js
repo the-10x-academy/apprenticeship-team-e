@@ -1,18 +1,22 @@
-import logo from "../../logo.svg";
+// import logo from "../../logo.svg";
+import React from "react";
 import "./HomePage.css";
 
-function HomePage() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Welcome To 10xAcademy React BoilerPlate (created on top of FB
-					create-react-app)
-				</p>
-			</header>
-		</div>
-	);
+class HomePage extends React.Component {
+  render() {
+    return (
+      <>
+        <div className="home_img">
+          <img src="./img/lens-1418954.png" alt="Home" />
+
+          <p className="intro">10x Team 04</p>
+          <button type="button" className="enter">
+            Enter
+          </button>
+        </div>
+      </>
+    );
+  }
 }
 
 export default HomePage;
