@@ -3,7 +3,11 @@ const { posts } = require("../Data/Postdata");
 
 module.exports = {
 	getPosts: async (req, res) => {
-		const data = await posts();
-		res.send(data);
+		try {
+			const data = await posts();
+			res.send(data);
+		} catch (error) {
+			console.log(error.message);
+		}
 	},
 };
