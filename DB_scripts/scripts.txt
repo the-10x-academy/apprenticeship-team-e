@@ -1,0 +1,52 @@
+Create and Start a Mongo DB Cluster on localhost
+
+1. Create data directories for different nodes of the cluster
+
+	mkdir apprenticeship-team-e/database/db1
+	mkdir apprenticeship-team-e/database/db2
+	mkdir apprenticeship-team-e/database/db3
+
+2. Start mongo nodes pointing to different ports
+
+   i)  Start 3 cmd as Administrator
+   ii) Type following command in one in a cmd:
+   	
+   	1) mongod --dbpath db1 --replSet apprenticeship-team-e/database/db1 --port 27018 --bind_ip localhost --oplogSize 128
+   	2) mongod --dbpath db1 --replSet apprenticeship-team-e/database/db2 --port 27019 --bind_ip localhost --oplogSize 128
+   	3) mongod --dbpath db1 --replSet apprenticeship-team-e/database/db3 --port 27020 --bind_ip localhost --oplogSize 128
+
+3. Initiate replica set
+   
+   i)  Now, open new cmd and connect to the node running on port 27018 as follows:
+	    mongo --port 27018
+
+   ii) Now you are in mongo console. Now we need to initiate the replica set using the following command:
+   	
+   	rs.initiate({ 
+   	_id: "db1", 
+   	members:[ 
+   		{ _id:0, 
+   		  host:"localhost:27018" 
+   		}, 
+   		{ _id:1, 
+   		  host:"localhost:27019" 
+   		}, 
+   		{ _id:2, 
+   		  host:"localhost:27020" 
+   		}
+   	] 
+   	})
+
+4. Ready to use
+  -> Now mongo cluster is ready and we can connect this with your application.
+
+
+
+For more reference visit: https://medium.com/javarevisited/start-mongo-db-cluster-on-localhost-a87de276595f
+
+
+Connection Guide:
+	https://docs.mongodb.com/drivers/node/fundamentals/connection
+	
+	
+
