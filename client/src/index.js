@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import image from './Components/images/mnit.jpg'
 import "./index.css";
-import App from "./Components/HomePage/HomePage";
+import App from "./Components/post/posts";
+
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<App author='mitesh' location="delhi" filePath={image} date="6 feb 2021" description="first thing" />
 	</React.StrictMode>,
 	document.getElementById("root"),
 );

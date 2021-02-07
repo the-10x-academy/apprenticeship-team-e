@@ -1,0 +1,101 @@
+.post_all{
+display: flex;
+  justify-content: center;
+  align-items: center; 
+
+}
+.post_box{
+  display: flex;
+  margin-top: 100px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  width: 420px;
+  height: 400px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  opacity: 1;
+  flex-direction: column;
+
+}
+.post_name{
+  margin-top: 12px;
+  text-align: left;
+  font: normal normal bold 17px/24px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.post_location{
+  margin-top: -12px;
+  text-align: left;
+  font: normal normal normal 18px/24px Verdana;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+.caption{
+  margin-top: 5px;
+  font: normal normal bold 18px/24px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.likes{
+  margin-top: 2px;
+  font: normal normal normal 12px/16px Verdana;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.post_header{
+    padding-left: 23px;
+    text-align: left;
+}
+.moreIcon{
+	width: 20px;
+	height: 5px;
+}
+.image{
+    display: flex;
+    margin-top: 3px;
+    border: 1px solid #707070;
+    background-size: 100% 100%;
+    width: 420px;
+    height:300px;
+
+}
+.Landingpage_div{
+    display:flex;
+    flex-direction: column;
+}
+.post_caption_likesCount{
+    padding-left: 23px;
+    text-align: left;
+}
+.post_like_share{
+    margin-top: 10px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 24px;
+}
+.post_like{
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+}
+.post_share{
+    padding-left: 25px;
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+}
+.post_date{
+    display: inline;
+    padding-left: 240px;
+    font: normal normal normal 12px/15px Verdana;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+
+} 
