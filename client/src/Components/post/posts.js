@@ -2,6 +2,7 @@ import React from 'react';
 import heart from './heart.png';
 import share from './share.png';
 import './post.css';
+// import header
 
 function postView(props){
     return (

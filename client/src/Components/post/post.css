@@ -65,10 +65,7 @@ display: flex;
     height:300px;
 
 }
-.Landingpage_div{
-    display:flex;
-    flex-direction: column;
-}
+
 .post_caption_likesCount{
     padding-left: 23px;
     text-align: left;
