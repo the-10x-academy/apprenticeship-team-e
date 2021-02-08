@@ -43,9 +43,9 @@ class UploadImage extends React.Component {
 		var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/;
 		if (allowedExtensions.exec(this.fileInput.current.files[0].name)) {
 			const formData = new FormData();
-			formData.append("name", this.state.Author_name);
+			formData.append("author", this.state.Author_name);
 			formData.append("location", this.state.location);
-			formData.append("caption", this.state.description);
+			formData.append("description", this.state.description);
 			formData.append("image", this.fileInput.current.files[0]);
 			alert(this.state.Author_name);
 			await fetch("http://localhost:9000/posts", {
