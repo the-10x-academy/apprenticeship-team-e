@@ -16,17 +16,17 @@ module.exports = {
 		const imageFile = req.file.filename;
 		const imagePath = req.file.path.replace("public", "");
 		var obj = {
-			name: req.body.name,
+			author: req.body.author,
 			location: req.body.location,
-			caption: req.body.caption,
-			image: imagePath,
+			description: req.body.description,
+			filePath: imagePath,
 		};
 		Post.create(obj, (err, item) => {
 			if (err) {
 				console.log(err);
 			} else {
 				// item.save();
-				// console.log(item);
+				console.log(item);
 				res.redirect("http://localhost:3000/");
 			}
 		});
