@@ -1,7 +1,11 @@
-const mongoose = require("mongoose");
-
-const post_schema = new mongoose.Schema({
-	name: {
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var schema = new Schema({
+	filePath: {
+		type: String,
+		required: true,
+	},
+	author: {
 		type: String,
 		required: true,
 	},
@@ -9,20 +13,14 @@ const post_schema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
-	caption: {
-		type: String,
-		required: true,
-	},
-	image: {
-		// data: Buffer,
-		// contentType: String,
-		type: String,
-		required: true,
-	},
 	date: {
 		type: Date,
 		default: Date.now,
 	},
+	description: {
+		type: String,
+		required: true,
+	},
 });
-
-module.exports = new mongoose.model("Post", post_schema);
+const post = new mongoose.model("post", schema);
+module.exports = post;
