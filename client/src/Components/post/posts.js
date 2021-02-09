@@ -17,7 +17,7 @@ function postView(props){
 					src="/moreIcon.png"
 					alt="moreIcon" 
 					 */}
-            <div className='image' style={{backgroundImage: `url(${props.filePath})`}}>
+            <div className='image' style={{backgroundImage: `url(${"http://localhost:9000/" + props.filePath})`}}>
                 </div>  
                 <div className='post_like_share'>
                     <input type="image" src={heart} alt='' className="post_like"/>
