@@ -9,10 +9,10 @@ function UploadHeader(){
     <div>
         <div className = "Header">
             <div>
-        <img className = "icon" src = "./img/icon.png" id = "icon" alt="icon"></img>
+        <img className = "icon" src = "./img/icon.png"  alt="icon"></img>
         <text className="Insta">Instaclone</text></div>
         <div>
-        <Link to="/posts/upload"><img className = "camera" src="./img/camera.png" id="camera" alt="camera"></img></Link>
+        <Link to="/posts/upload"><img className = "camera" src="./img/camera.png"  alt="camera"></img></Link>
         </div></div >
         </div>
 
