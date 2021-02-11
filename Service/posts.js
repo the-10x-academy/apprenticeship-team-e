@@ -1,7 +1,8 @@
 require("../Data/Postdata");
 const { posts } = require("../Data/Postdata");
-const path = require("path");
+
 const Post = require("../models/post");
+
 
 module.exports = {
 	getPosts: async (req, res) => {
@@ -12,6 +13,7 @@ module.exports = {
 			console.log(error.message);
 		}
 	},
+
 	insertPost: (req, res, next) => {
 		const imageFile = req.file.filename;
 		const imagePath = req.file.path.replace("public", "");

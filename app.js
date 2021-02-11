@@ -8,6 +8,7 @@ const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 
+const dbConnection = require("./Services/db_connection");
 const app = express();
 
 // view engine setup
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.use("/", indexRouter);
+// app.use("/db.js", dbConnection);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

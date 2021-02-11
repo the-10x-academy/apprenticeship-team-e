@@ -2,7 +2,7 @@ const express = require("express");
 const { getPosts } = require("../Service/posts");
 const { insertPost } = require("../Service/posts");
 const router = express.Router();
-require("../mongo");
+
 require("../Service/posts");
 
 /* GET home page. */
