@@ -3,7 +3,6 @@ const { posts } = require("../Data/Postdata");
 
 const Post = require("../models/post");
 
-
 module.exports = {
 	getPosts: async (req, res) => {
 		try {
@@ -28,8 +27,8 @@ module.exports = {
 				console.log(err);
 			} else {
 				// item.save();
-				console.log(item);
-				res.redirect("http://localhost:3000/");
+				// console.log(item);
+				res.redirect("http://localhost:3000/posts");
 			}
 		});
 	},
