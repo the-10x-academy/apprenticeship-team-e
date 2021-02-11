@@ -1,7 +1,7 @@
 var mongoose =require('mongoose')
 var Schema=mongoose.Schema
 var schema =new Schema({
-    filePath:{
+    imagePath:{
         type:String,
         required:true
     },

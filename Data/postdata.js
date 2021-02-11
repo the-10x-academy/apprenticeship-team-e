@@ -1,5 +1,4 @@
 const Post = require("models/post");
-
 module.exports = {
   posts: async () => {
     try {

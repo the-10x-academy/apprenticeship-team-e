@@ -1,6 +1,8 @@
 // import logo from "../../logo.svg";
 import React from "react";
 import "./HomePage.css";
+import {Link} from "react-router-dom";
+// import postlist from '../post/postlistPage'
 
 class HomePage extends React.Component {
 	render() {
