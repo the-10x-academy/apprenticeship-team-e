@@ -8,7 +8,7 @@ const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 
-const dbConnection = require("./Services/db_connection");
+const dbConnection = require("./mongo");
 const app = express();
 
 // view engine setup
@@ -26,6 +26,10 @@ app.use(cors());
 
 app.use("/", indexRouter);
 // app.use("/db.js", dbConnection);
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("client/build"));
+}
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
