@@ -1,10 +1,10 @@
 import React from 'react';
 import Postlistpage from './Postlistpage';
-import Header from '..Header/UploadHeader';
+import UploadHeader from '..Header/UploadHeader';
 
 function postlist(){
     return <div>
-        <Header/>
+        <UploadHeader/>
         <Postlistpage/>
     </div>
 }
