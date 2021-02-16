@@ -8,7 +8,7 @@ class Postlistpage extends React.Component {
 	}
 	componentDidMount() {
 		console.log("component did mount");
-		fetch("http://localhost:9000/posts")
+		fetch("https://japsa.herokuapp.com/posts" || "http://localhost:9000/posts")
 			.then((res) => {
 				//console.log(res);
 				return res.json();

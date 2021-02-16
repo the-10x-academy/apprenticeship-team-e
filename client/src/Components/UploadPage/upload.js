@@ -49,10 +49,13 @@ class UploadImage extends React.Component {
 			formData.append("description", this.state.description);
 			formData.append("image", this.fileInput.current.files[0]);
 			alert(this.state.Author_name);
-			await fetch("http://localhost:9000/posts", {
-				method: "POST",
-				body: formData,
-			})
+			await fetch(
+				"https://japsa.herokuapp.com/posts" || "http://localhost:9000/posts",
+				{
+					method: "POST",
+					body: formData,
+				},
+			)
 				.then((response) => response.json())
 				.catch((error) => {
 					console.error("Error:", error);
