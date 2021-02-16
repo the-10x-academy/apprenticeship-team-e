@@ -15,7 +15,7 @@ module.exports = {
 
 	insertPost: (req, res, next) => {
 		const imageFile = req.file.filename;
-		const imagePath = req.file.path.replace("public", "");
+		const imagePath = req.file.path.replace("uploads", "");
 		var obj = {
 			author: req.body.author,
 			location: req.body.location,

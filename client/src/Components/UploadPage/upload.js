@@ -1,5 +1,6 @@
 import React from "react";
 import "./upload.css";
+import Header from "../Header/HeaderComponent";
 
 class UploadImage extends React.Component {
 	constructor(props) {
@@ -63,84 +64,87 @@ class UploadImage extends React.Component {
 	}
 	render() {
 		return (
-			<div className="box">
-				<form onSubmit={this.handleSubmit}>
-					<table className="tab1">
-						<tr>
-							<td colSpan="3">
-								<label>
+			<div>
+				<Header />
+				<div className="box">
+					<form onSubmit={this.handleSubmit}>
+						<table className="tab1">
+							<tr>
+								<td colSpan="3">
+									<label>
+										<input
+											type="text"
+											disabled="true"
+											className="text-height"
+											placeholder="No file chosen"
+											value={this.state.fileName}
+											style={{ width: "374px" }}
+										/>
+										<input
+											type="file"
+											ref={this.fileInput}
+											name="file"
+											className="file-btn"
+											onChange={this.handleChange.bind(this)}
+										/>
+										<button
+											onClick={this.handleClick.bind(this)}
+											className="fake-btn"
+										>
+											Browse
+										</button>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td className="tdAuthLoc">
 									<input
 										type="text"
-										disabled="true"
+										placeholder="Author"
 										className="text-height"
-										placeholder="No file chosen"
-										value={this.state.fileName}
-										style={{ width: "374px" }}
-									/>
-									<input
-										type="file"
-										ref={this.fileInput}
-										name="file"
-										className="file-btn"
+										name="Author_name"
+										value={this.state.Author_name}
 										onChange={this.handleChange.bind(this)}
 									/>
-									<button
-										onClick={this.handleClick.bind(this)}
-										className="fake-btn"
-									>
-										Browse
-									</button>
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<td className="tdAuthLoc">
-								<input
-									type="text"
-									placeholder="Author"
-									className="text-height"
-									name="Author_name"
-									value={this.state.Author_name}
-									onChange={this.handleChange.bind(this)}
-								/>
-							</td>
-							<td></td>
-							<td>
-								<input
-									type="text"
-									placeholder="Location"
-									className="text-height"
-									name="location"
-									value={this.state.location}
-									onChange={this.handleChange.bind(this)}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<td colSpan="3">
-								<input
-									type="text"
-									placeholder="Description"
-									name="description"
-									className="text-height"
-									value={this.state.description}
-									onChange={this.handleChange.bind(this)}
-									className="description1"
-								/>
-							</td>
-						</tr>
-						<tr>
-							<td className="btn-submit" colSpan="3">
-								<input
-									type="submit"
-									value="Post"
-									className="btn-submit"
-									disabled={this.state.disable}
-								/>
-							</td>
-						</tr>
-					</table>
-				</form>
+								</td>
+								<td></td>
+								<td>
+									<input
+										type="text"
+										placeholder="Location"
+										className="text-height"
+										name="location"
+										value={this.state.location}
+										onChange={this.handleChange.bind(this)}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td colSpan="3">
+									<input
+										type="text"
+										placeholder="Description"
+										name="description"
+										className="text-height"
+										value={this.state.description}
+										onChange={this.handleChange.bind(this)}
+										className="description1"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td className="btn-submit" colSpan="3">
+									<input
+										type="submit"
+										value="Post"
+										className="btn-submit"
+										disabled={this.state.disable}
+									/>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
 			</div>
 		);
 	}

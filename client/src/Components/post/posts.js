@@ -1,25 +1,28 @@
 import React from "react";
 import heart from "./heart.png";
 import share from "./share.png";
+import moreicon from "./moreIcon.png";
 import "./post.css";
 // import header
-
 function postView(props) {
 	return (
 		<div className="post_all">
 			<div className="post_box">
 				<div className="post_header">
-					<h1 className="post_name">{props.author}</h1>
-					<h1 className="post_location">{props.location}</h1>
+					<div className="text1">
+						<h1 className="post_name">{props.author}</h1>
+						<h1 className="post_location">{props.location}</h1>
+					</div>
+					<div>
+						<img className="moreicon" src={moreicon} alt="moreIcon" />
+					</div>
 				</div>
-
-				{/* {/* <img
-					className="MoreIcon"
-					src="/moreIcon.png"
-					alt="moreIcon" 
-					 */}
 				<div className="image">
-					<img src={"http://localhost:9000/" + props.filePath} alt="Post" />
+					<img
+						className="image1"
+						src={"http://localhost:9000/" + props.filePath}
+						alt="Post"
+					/>
 				</div>
 				<div className="post_like_share">
 					<input type="image" src={heart} alt="" className="post_like" />

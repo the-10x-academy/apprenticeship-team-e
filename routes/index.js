@@ -6,15 +6,15 @@ const router = express.Router();
 require("../Service/posts");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-	res.render("index", { title: "Express" });
-});
+// router.get("/", function (req, res, next) {
+// 	res.render("index", { title: "Express" });
+// });
 
 const multer = require("multer");
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, "public/uploads");
+		cb(null, "uploads");
 	},
 	filename: (req, file, cb) => {
 		cb(null, file.fieldname + "-" + Date.now() + ".jpg");

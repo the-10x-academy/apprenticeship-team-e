@@ -14,8 +14,8 @@ function App() {
 		<Router>
 			<Switch>
 				<Route exact path="/" component={Homepage} />
-				<Route exact path="/posts" component={postlist} />
-				<Route exact path="/posts/upload" component={upload} />
+				<Route exact path="/getposts" component={postlist} />
+				<Route exact path="/getposts/upload" component={upload} />
 			</Switch>
 		</Router>
 	);

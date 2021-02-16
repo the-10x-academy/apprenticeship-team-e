@@ -23,7 +23,12 @@ class Postlistpage extends React.Component {
 		console.log(this.state.posts);
 		return (
 			<div className="Landingpage_div">
-				<ul>{this.state.posts.map((post) => postView(post))}</ul>
+				<ul>
+					{this.state.posts
+						.slice(0)
+						.reverse()
+						.map((post) => postView(post))}
+				</ul>
 			</div>
 		);
 	}

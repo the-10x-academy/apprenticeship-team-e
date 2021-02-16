@@ -11,7 +11,7 @@ function UploadHeader() {
 					<text className="Insta">Instaclone</text>
 				</div>
 				<div>
-					<Link to="/posts/upload">
+					<Link to="/getposts/upload">
 						<img className="camera" src="../img/camera.png" alt="camera"></img>
 					</Link>
 				</div>

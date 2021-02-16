@@ -22,13 +22,18 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "uploads")));
 app.use(cors());
 
 app.use("/", indexRouter);
 // app.use("/db.js", dbConnection);
 
 if (process.env.NODE_ENV === "production") {
-	app.use(express.static("client/build"));
+	app.use(express.static(path.join(__dirname, "client/build")));
+
+	app.get("/*", function (req, res) {
+		res.sendFile(path.join(__dirname, "client/build", "index.html"));
+	});
 }
 
 // catch 404 and forward to error handler
