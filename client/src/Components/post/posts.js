@@ -21,7 +21,7 @@ function postView(props) {
 					<img
 						className="image1"
 						src={
-							"https://japsa.herokuapp.com/posts" ||
+							"https://japsa.herokuapp.com/" + props.filePath ||
 							"http://localhost:9000/" + props.filePath
 						}
 						alt="Post"
